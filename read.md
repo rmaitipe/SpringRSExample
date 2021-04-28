@@ -2,7 +2,7 @@ Basic HATEOAS http calls webservice built using RESTEasy JAX-RS & JAXB, consumes
 mapped using @ApplicationPath, @Path
              @XmlRootElement, @XmlAccessorType
              
-RestAPIExample is the Registered web context set in web project settings.
+RestAPIExample1 is the Registered web context set in web project settings.
 GET
 	/RestAPIExample1/network-management/configurations
 	/RestAPIExample1/network-management/configurations/1
