@@ -1,6 +1,7 @@
 Basic HATEOAS http calls webservice built using Spring-RS, without xml using reference
 mapped using @RestController, @Service
-
+Uses JpaRepository 
+If you provide a dependency to spring-boot-starter-data-jpa in pom.xml with no other config, JPA/Hibernate uses an in-memory H2 database 
              
 GET
 	localhost:8080/books
