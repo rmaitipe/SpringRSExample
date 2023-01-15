@@ -1,6 +1,10 @@
-Basic HATEOAS http calls webservice built using Spring-RS, without xml using reference
-mapped using @RestController, @Service
-Uses JpaRepository 
+Basic http calls webservice built using Spring-RS, extending JpaRepository, without xml references
+mapped using @RestController, @Service annotations
+@ControllerAdvice/@RestControllerAdvice in a class that extends ResponseEntityExceptionHandler for Exception handling 
+using @ExceptionHandler
+
+
+
 If you provide a dependency to spring-boot-starter-data-jpa in pom.xml with no other config, JPA/Hibernate uses an in-memory H2 database 
              
 GET
@@ -21,7 +25,6 @@ PUT
 	"author":"pivotal",
 	"price":9.99
 }
-
 DELETE
 	localhost:8080/books/4
 	
