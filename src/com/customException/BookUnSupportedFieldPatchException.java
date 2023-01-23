@@ -1,4 +1,4 @@
-package com.error;
+package com.customException;
 
 import java.util.Set;
 

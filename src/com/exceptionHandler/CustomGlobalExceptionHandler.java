@@ -1,5 +1,7 @@
-package com.error;
+package com.exceptionHandler;
 
+import com.customException.BookNotFoundException;
+import com.customException.BookUnSupportedFieldPatchException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

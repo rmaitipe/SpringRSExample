@@ -3,6 +3,8 @@ package com.controller;
 import java.util.List;
 import java.util.Map;
 
+import com.mapper.SimpleMapper;
+import com.mapStructPojos.BookDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
@@ -17,9 +19,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import com.error.BookNotFoundException;
-import com.error.BookUnSupportedFieldPatchException;
-import com.pojos.Book;
+import com.customException.BookNotFoundException;
+import com.customException.BookUnSupportedFieldPatchException;
+import com.entity.Book;
 import com.service.BookRepository;
 
  
@@ -28,6 +30,9 @@ public class BookController {
 
     @Autowired
     private BookRepository repository;
+
+    @Autowired
+    private SimpleMapper mapper;
 
     // Find
     @GetMapping("/books")
@@ -48,6 +53,17 @@ public class BookController {
     Book findOne(@PathVariable Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new BookNotFoundException(id));
+    }
+
+
+    @GetMapping("/books/dto/{id}")
+    BookDTO findDTOOne(@PathVariable Long id) {
+        return mapper.convertToDTO(repository.findById(id).get());
+    }
+
+    @GetMapping("/books/getBookByQuery/{id}")
+    Book findLatest(@PathVariable Long id) {
+        return repository.retrieveBookById(id);
     }
 
     // Save or update

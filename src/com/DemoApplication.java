@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 
-import com.pojos.Book;
+import com.entity.Book;
 import com.service.BookRepository;
 
 
