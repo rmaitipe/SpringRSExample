@@ -74,6 +74,11 @@ if we include lombok-mapstruct-binding as annotation processor in our build-->
             <version>${org.projectlombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.4</version>
+        </dependency>
     </dependencies>
 
     <build>

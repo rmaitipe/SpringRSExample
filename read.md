@@ -33,3 +33,7 @@ Setup
 	Moved controller to same folder as application
 required a bean of type 'com.service.IConfigurationService' that could not be found
 	Added @ComponentScan(basePackages = "com.service")
+
+Swagger support
+https://www.baeldung.com/spring-rest-openapi-documentation
+http://localhost:8080/swagger-ui.html
